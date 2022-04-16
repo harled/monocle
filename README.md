@@ -2,7 +2,7 @@
 
 🤵‍♀️🤵 Using Pundit as a User Experience (UX) tool 🤵🤵‍♀️
 
-A suite of [ViewComponents](https://github.com/github/view_component) for plug and play use right from your [Pundit](https://github.com/varvet/pundit) Exception data! Pundit's a very commonly used authorization framework for ruby applications, but it's got a hidden talent, UX! Moncale sits on Pundit's eye and provides insights of broken flows in your app leading to unauthorized responses.
+A suite of [ViewComponents](https://github.com/github/view_component) for plug and play use right from your [Pundit](https://github.com/varvet/pundit) exception data! Pundit is a popular authorization framework for Rails applications, but it has a hidden talent, UX! Moncale sits on Pundit's eye and provides insights of broken flows in your app leading to unauthorized responses.
 
 This gem includes components for the following reports: **Add completed components here**
 - Issue: https://github.com/harled/monocle/issues/1
@@ -15,7 +15,7 @@ This gem assumes:
   - The name of the controller in which the exception was called: `controller_name: string`
   - The name of the unauthorized action: `action_name: string`
 - Bootstrap 5.1 is loaded in your project
-  - It will work without Bootstrap, however, you will need to provide your own custom styling for the Bootstrap equivalent classes.
+  - It will work without Bootstrap, however, you will need to provide your own custom styling for several Bootstrap classes.
 
 ## Installation
 
@@ -52,13 +52,14 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/harled
 
 Want to help us out? Here are some steps to make sure you are contributing
 
-Find an issue you like, or create a new issue here
+1. Find an issue you like, or create a new issue here
 Please ask for any questions or clarifications in the associated issues or in new issues! 🤔
-Assign yourself to the issue and create a branch , following GitHub Issue's naming scheme. 🛠️
+2. Assign yourself to the issue and create a branch , following GitHub Issue's naming scheme. 🛠️
 The naming scheme should follow (#issueNumber-issue-name) ie. (#10-create-new-component)
-Get on your local machine and ensure you have the repo cloned. Checkout the branch you just made with git checkout branch-name and pull the latest merged changes from the repo with git pull origin main to make sure you have the most up-to-date code from the repo. 👩‍💻
-Add your amazing changes along with any documentation you feel would be useful. Then commit and push your changes. 🌟
-Go back to the repo on GitHub and create a pull request! Then wait for an admin of the repo to get back to your pull request, address any comments and once you are finally approved, merge your code into Monocle! 🎉
+3. Get on your local machine and ensure you have the repo cloned. Checkout the branch you just made with git checkout branch-name and pull the latest merged changes from the repo with git pull origin main to make sure you have the most up-to-date code from the repo. 👩‍💻
+4. Add your amazing changes along with any documentation you feel would be useful. Then commit and push your changes. 🌟
+5. Go back to the repo on GitHub and create a pull request! Then wait for an admin of the repo to get back to your pull request, address any comments and once you are finally approved, merge your code into Monocle! 🎉
+
 If you want some more tips on contributing to GitHub projects, check out this resource from Data School.
 
 ## License
