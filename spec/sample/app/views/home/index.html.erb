@@ -1,0 +1,5 @@
+<div class="row mt-4">
+    <div class="col-md-6 d-flex align-items-stretch">
+        <%= render Monocle::ExceptionsSinceTimeAgoComponent.new(exceptions: PunditException.all) %>
+    </div>
+</div>

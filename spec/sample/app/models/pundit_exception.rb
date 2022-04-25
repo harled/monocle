@@ -1,0 +1,2 @@
+class PunditException < ApplicationRecord
+end
