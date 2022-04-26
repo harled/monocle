@@ -2,4 +2,7 @@
     <div class="col-md-6 d-flex align-items-stretch">
         <%= render Monocle::ExceptionsSinceTimeAgoComponent.new(exceptions: PunditException.all) %>
     </div>
+    <div class="col-md-6 d-flex align-items-stretch">
+        <%= render Monocle::UsersAffectedSinceTimeAgoComponent.new(exceptions: PunditException.all) %>
+    </div>
 </div>
