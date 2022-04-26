@@ -4,6 +4,9 @@ class CreatePunditExceptions < ActiveRecord::Migration[7.0]
       t.text :controller_name, null: false
       t.text :action_name, null: false
 
+      # Typically would represent a foreign_key relation to a User table
+      t.bigint :user_id, null: false
+
       t.timestamps
     end
   end

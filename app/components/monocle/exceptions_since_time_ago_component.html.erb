@@ -1,11 +1,10 @@
 <div class="card shadow-sm m-0 h-100 w-100 ">
   <div class="card-body ">
     <div class="d-flex flex-column h-100">
-      <h4 class="text-center">Exceptions in the last 24hrs</h4>
+      <h4 class="text-center">Exceptions</h4>
       <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-between align-items-center">
-        <div></div>
-        <h2 class="m-0"><%= @exceptions_in_last_24_hours %></h2>
-        <div class="text-<%= @percentage_increase >= 0 ? "success" : "danger" %>"><%= @percentage_increase %>%</div>
+        <h2 class="m-0"><%= @exceptions_created %></h2>
+        <div class="text-<%= @percentage_increase <= 0 ? "success" : "danger" %>"><%= @percentage_increase %>%</div>
       </div>
     </div>
   </div>
