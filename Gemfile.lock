@@ -238,6 +238,7 @@ DEPENDENCIES
   rake (~> 13.0)
   rspec (~> 3.0)
   rspec-rails (~> 5.0.0)
+  rubocop
   sprockets-rails (~> 3.2.2)
   sqlite3 (>= 1.4)
   standard (~> 1.3)
