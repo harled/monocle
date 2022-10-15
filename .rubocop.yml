@@ -1,8 +1,17 @@
+require:
+  - standard
+  - rubocop-rails
+  - rubocop-performance
+
+inherit_gem:
+  standard: config/base.yml
+
 AllCops:
   NewCops: enable
   Exclude:
     - 'test/**'
     - 'spec/sample/bin/**'
+    - 'vendor/bundle'
 
 Gemspec/RequireMFA:
   Enabled: false
