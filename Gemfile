@@ -16,12 +16,12 @@ group :rubocop do
   gem "rubocop", ">= 0.47", require: false
   gem "rubocop-rails", require: false
   gem "rubocop-performance", require: false
+  gem "standard", "~> 1.3"
 end
 
 gem "factory_bot_rails"
 gem "rspec-rails", "~> 5.0.0"
 
-gem "standard", "~> 1.3"
 
 gem "debug", platforms: %i[mri mingw x64_mingw]
 
