@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -10,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_25_003437) do
+ActiveRecord::Schema[7.0].define(version: 20_220_425_003_437) do
   create_table "pundit_exceptions", force: :cascade do |t|
     t.text "controller_name", null: false
     t.text "action_name", null: false

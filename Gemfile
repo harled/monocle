@@ -11,10 +11,16 @@ gem "sqlite3", ">= 1.4"
 gem "rake", "~> 13.0"
 
 gem "rspec", "~> 3.0"
-gem "rspec-rails", "~> 5.0.0"
-gem "factory_bot_rails"
 
-gem "standard", "~> 1.3"
+group :rubocop do
+  gem "rubocop", ">= 0.47", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-performance", require: false
+  gem "standard", "~> 1.3"
+end
+
+gem "factory_bot_rails"
+gem "rspec-rails", "~> 5.0.0"
 
 gem "debug", platforms: %i[mri mingw x64_mingw]
 
@@ -24,4 +30,4 @@ if RUBY_VERSION >= "3.1"
   gem "net-smtp", require: false
 end
 
-gem "byebug", "~> 11.1", groups: [:development, :test]
+gem "byebug", "~> 11.1", groups: %i[development test]
