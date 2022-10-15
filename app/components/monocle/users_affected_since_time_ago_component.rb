@@ -6,10 +6,10 @@ class Monocle::UsersAffectedSinceTimeAgoComponent < ApplicationComponent
     exceptions_last_period = exceptions.where(created_at: (2 * time_ago).ago..time_ago.ago).count.to_f
 
     @percentage_increase = if exceptions_last_period == 0
-      @users_affected
-    else
-      (@users_affected - exceptions_last_period) / exceptions_last_period
-    end
+                             @users_affected
+                           else
+                             (@users_affected - exceptions_last_period) / exceptions_last_period
+                           end
 
     @percentage_increase = (@percentage_increase * 100.0).round
   end

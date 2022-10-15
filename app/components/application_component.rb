@@ -1,4 +1,4 @@
-require "view_component"
+require 'view_component'
 
 class ApplicationComponent < ViewComponent::Base
   include ActiveModel::Validations

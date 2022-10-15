@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_25_003437) do
-  create_table "pundit_exceptions", force: :cascade do |t|
-    t.text "controller_name", null: false
-    t.text "action_name", null: false
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+ActiveRecord::Schema[7.0].define(version: 20_220_425_003_437) do
+  create_table 'pundit_exceptions', force: :cascade do |t|
+    t.text 'controller_name', null: false
+    t.text 'action_name', null: false
+    t.bigint 'user_id', null: false
+    t.datetime 'created_at', null: false
+    t.datetime 'updated_at', null: false
   end
 end
