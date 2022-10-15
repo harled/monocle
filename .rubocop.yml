@@ -1,0 +1,10 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'test/**'
+    - 'spec/sample/bin/**'
+
+Gemspec/RequireMFA:
+  Enabled: false
+Lint/MissingSuper:
+  Enabled: false
