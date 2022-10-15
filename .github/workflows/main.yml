@@ -25,3 +25,5 @@ jobs:
         bundler-cache: true
     - name: Run the default task
       run: bundle exec rake
+    - name: RuboCop Linter Action
+      uses: andrewmcodes-archive/rubocop-linter-action@v3.3.0
