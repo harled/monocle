@@ -7,12 +7,15 @@ inherit_gem:
   standard: config/base.yml
 
 AllCops:
-  NewCops: enable
+  DisabledByDefault: true
+  SuggestExtensions: false
   TargetRubyVersion: 3.0
   Exclude:
     - 'test/**'
-    - 'spec/sample/bin/**'
-    - 'vendor/bundle'
+    - 'spec/sample/bin/**/*'
+    - '**/tmp/**/*'
+    - '**/templates/**/*'
+    - '**/vendor/**/*'
 
 Gemspec/RequireMFA:
   Enabled: false
