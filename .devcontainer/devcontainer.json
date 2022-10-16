@@ -15,7 +15,11 @@
 	},
 
 	// Set *default* container specific settings.json values on container create.
-	"settings": {},
+	"settings": {
+		// RoR standard is two space indents
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
