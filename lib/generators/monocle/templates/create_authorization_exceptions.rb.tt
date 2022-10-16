@@ -1,6 +1,6 @@
 class <%= migration_class_name %> < ActiveRecord::Migration<%= migration_version %>
   def change
-    create_table :notable_jobs do |t|
+    create_table :monocle_authorization_exceptions do |t|
       t.string :title
       t.string :request
       t.string :controller_name
