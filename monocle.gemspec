@@ -29,15 +29,23 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
+  # frontend
   spec.add_dependency "view_component"
 
+  # debug
   spec.add_development_dependency "debug", "~> 1.0"
+
+  # test
   spec.add_development_dependency "factory_bot", "~> 6.0"
   spec.add_development_dependency "rspec-rails", "~> 5.0"
+
+  # run
   spec.add_development_dependency "sprockets-rails", "~> 3.2.2"
   spec.add_development_dependency "sqlite3", "~> 1.0"
 
-  # For more information and examples about making a new gem, check out our
-  # guide at: https://bundler.io/guides/creating_gem.html
+  # lint
+  spec.add_development_dependency "rubocop", ">= 0.47"
+  spec.add_development_dependency "rubocop-rails"
+  spec.add_development_dependency "rubocop-performance"
+  spec.add_development_dependency "standard", "~> 1.3"
 end
