@@ -1,6 +1,6 @@
 module Monocle
   class AuthorizationException < ActiveRecord::Base
-    self.table_name = "authorization_exceptions"
+    self.table_name = "monocle_authorization_exceptions"
 
     belongs_to :user, polymorphic: true, optional: true
 

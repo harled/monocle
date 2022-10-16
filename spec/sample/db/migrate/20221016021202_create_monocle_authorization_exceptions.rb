@@ -1,6 +1,6 @@
 class CreateMonocleAuthorizationExceptions < ActiveRecord::Migration[7.0]
   def change
-    create_table :notable_jobs do |t|
+    create_table :monocle_authorization_exceptions do |t|
       t.string :title
       t.string :request
       t.string :controller_name
