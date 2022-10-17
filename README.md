@@ -33,9 +33,20 @@ Or install it yourself as:
 
     $ gem install monocle
 
-## Usage
+## Installation
 
-TODO: Write usage instructions (https://github.com/harled/monocle/issues/6) here
+Add the monocle gem to your application's Gemfile:
+
+```ruby
+gem "monocle"
+```
+
+To generate the migration and build the data model, run:
+
+```base
+rails generate monocle:authorization_exceptions
+rails db:migrate
+```
 
 ## Development
 

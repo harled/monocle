@@ -1,0 +1,16 @@
+class <%= migration_class_name %> < ActiveRecord::Migration<%= migration_version %>
+  def change
+    create_table :monocle_authorization_exceptions do |t|
+      t.string :title
+      t.string :request
+      t.string :controller_name
+      t.string :action_name
+      t.string :exception_class
+      t.text :backtrace, array: true, default: []
+
+      t.references :user, polymorphic: true
+
+      t.timestamps
+    end
+  end
+end

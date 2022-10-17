@@ -1,8 +1,8 @@
 <div class="row mt-4">
     <div class="col-md-6 d-flex align-items-stretch">
-        <%= render Monocle::ExceptionsSinceTimeAgoComponent.new(exceptions: PunditException.all) %>
+        <%= render Monocle::ExceptionsSinceTimeAgoComponent.new(exceptions: Monocle::AuthorizationException.all) %>
     </div>
     <div class="col-md-6 d-flex align-items-stretch">
-        <%= render Monocle::UsersAffectedSinceTimeAgoComponent.new(exceptions: PunditException.all) %>
+        <%= render Monocle::UsersAffectedSinceTimeAgoComponent.new(exceptions: Monocle::AuthorizationException.all) %>
     </div>
 </div>
