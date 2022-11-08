@@ -6,7 +6,7 @@ module Monocle
   class HighestControllerActionCountComponent < ApplicationComponent
     def initialize(exceptions:, time_ago: 24.hours)
       @time_ago = time_ago
-      @highest_controller_action_count = exceptions.group(:controller_name, :action_name).count.sort_by(&:second).last
+      @highest_controller_action_count = exceptions.group(:controller_name, :action_name).count.max_by(&:second)
       @highest_controller_action_count = @highest_controller_action_count.first.first + "#" + @highest_controller_action_count.first.second
     end
   end
