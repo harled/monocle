@@ -10,7 +10,7 @@
   </div>
   <div class="col col-md-4">
     <div class="card h-100 w-100">
-      <div class="my-5 py-4"></div>
+      <%= render Monocle::ExceptionsByRequestComponent.new(exceptions: Monocle::AuthorizationException.all) %>
     </div>
   </div>
   <div class="col col-md-4">

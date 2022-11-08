@@ -12,6 +12,7 @@ created_dates = [1.day.ago, 2.days.ago, 3.days.ago, 1.week.ago, 2.weeks.ago, 3.w
 100.times do
   controller_name = controller_names.sample
   action_name = action_names.sample
+
   Monocle::AuthorizationException.create(
     title: title,
     request: requests.sample,
