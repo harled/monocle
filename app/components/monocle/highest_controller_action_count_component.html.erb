@@ -1,0 +1,11 @@
+<div class="card shadow-sm m-0 h-100 w-100 ">
+  <div class="card-body ">
+    <div class="d-flex flex-column h-100">
+      <h5 class="text-muted mb-0">Most by controller#action</h5>
+      <div class="flex-grow-1 d-flex flex-row justify-content-left align-items-baseline overflow-scroll">
+        <h2 class="my-2"><%= @highest_controller_action_count %></h2>
+      </div>
+      <p class="text-muted m-0">Since <%= time_ago_in_words(@time_ago.ago) %> ago</p>
+    </div>
+  </div>
+</div>

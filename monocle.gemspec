@@ -31,6 +31,7 @@ Gem::Specification.new do |spec|
 
   # frontend
   spec.add_dependency "view_component"
+  spec.add_dependency "groupdate"
 
   # debug
   spec.add_development_dependency "debug", "~> 1.0"

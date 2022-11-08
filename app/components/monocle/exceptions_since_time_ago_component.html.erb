@@ -1,11 +1,12 @@
 <div class="card shadow-sm m-0 h-100 w-100 ">
   <div class="card-body ">
     <div class="d-flex flex-column h-100">
-      <h4 class="text-center">Exceptions</h4>
-      <div class="flex-grow-1 d-flex flex-column align-items-center justify-content-between align-items-center">
-        <h2 class="m-0"><%= @exceptions_created %></h2>
-        <div class="text-<%= @percentage_increase <= 0 ? "success" : "danger" %>"><%= @percentage_increase %>%</div>
+      <h5 class="text-muted mb-0">Exceptions</h5>
+      <div class="flex-grow-1 d-flex flex-row justify-content-left align-items-baseline">
+        <h2 class="my-2"><%= @exceptions_created %></h2>
+        <div class="ms-2 <%= @percentage_increase <= 0 ? "text-success" : "text-danger" %>"><%= @percentage_increase %>%</div>
       </div>
+      <p class="text-muted m-0">Since <%= time_ago_in_words(@time_ago.ago) %> ago</p>
     </div>
   </div>
 </div>
