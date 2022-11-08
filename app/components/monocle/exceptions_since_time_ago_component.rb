@@ -6,8 +6,9 @@ module Monocle
   # - The percentage increase in them
   class ExceptionsSinceTimeAgoComponent < ApplicationComponent
     def initialize(exceptions:, time_ago: 24.hours)
-      @exceptions_created = exceptions.where(created_at: time_ago.ago..).count.to_f
-      exceptions_last_period = exceptions.where(created_at: (2 * time_ago).ago..time_ago.ago).count.to_f
+      @time_ago = time_ago
+      @exceptions_created = exceptions.where(created_at: @time_ago.ago..).count.to_f
+      exceptions_last_period = exceptions.where(created_at: (2 * @time_ago).ago..@time_ago.ago).count.to_f
 
       @percentage_increase = if exceptions_last_period.zero?
         @exceptions_created

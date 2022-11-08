@@ -45,6 +45,8 @@
 
 /spec/sample/public/assets
 
+/spec/sample/node_modules
+
 # Ignore master key for decrypting credentials and more.
 /spec/sample/config/master.key
 vendor/cache/
