@@ -39,4 +39,7 @@
   <div class="col-md-6 d-flex align-items-stretch">
     <%= render Monocle::ControllersOverTimeComponent.new(exceptions: Monocle::AuthorizationException.all) %>
   </div>
+  <div class="col-md-6 d-flex align-items-stretch">
+    <%= render Monocle::TopTenUsersComponent.new(exceptions: Monocle::AuthorizationException.all) %>
+  </div>
 </div>
