@@ -28,7 +28,15 @@
   <div class="col-md-3 d-flex align-items-stretch">
     <%= render Monocle::UsersAffectedSinceTimeAgoComponent.new(exceptions: Monocle::AuthorizationException.all) %>
   </div>
-  <div class="col-md-3 d-flex align-items-stretch">
+  <div class="col-md-6 d-flex align-items-stretch">
     <%= render Monocle::HighestControllerActionCountComponent.new(exceptions: Monocle::AuthorizationException.all) %>
+  </div>
+</div>
+
+<p class="text-muted text-center mt-5">STATS OVER TIME</p>
+<hr/>
+<div class="row mt-4">
+  <div class="col-md-6 d-flex align-items-stretch">
+    <%= render Monocle::ExceptionsSinceTimeAgoComponent.new(exceptions: Monocle::AuthorizationException.all) %>
   </div>
 </div>

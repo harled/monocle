@@ -1,7 +1,7 @@
 <div class="card shadow-none m-0 h-100 w-100 border-0">
   <div class="card-body ">
     <h4 class="my-2 text-center">Exceptions By Request</h4>
-    <p class="text-muted text-center m-0">In the last <%= time_ago_in_words(@time_ago.ago) %></p>
+    <p class="text-muted text-center m-0">Since <%= time_ago_in_words(@time_ago.ago) %> ago</p>
     <%= apex_pie_chart @exceptions_by_request, module: true, legend: false, id: "ID#{SecureRandom.hex}" %>
   </div>
 </div>

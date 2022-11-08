@@ -5,7 +5,7 @@
       <div class="flex-grow-1 d-flex flex-row justify-content-left align-items-baseline overflow-scroll">
         <h2 class="my-2"><%= @highest_controller_action_count %></h2>
       </div>
-      <p class="text-muted m-0">In the last <%= time_ago_in_words(@time_ago.ago) %></p>
+      <p class="text-muted m-0">Since <%= time_ago_in_words(@time_ago.ago) %> ago</p>
     </div>
   </div>
 </div>

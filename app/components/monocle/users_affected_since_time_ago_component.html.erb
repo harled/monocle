@@ -6,7 +6,7 @@
         <h2 class="my-2"><%= @users_affected %></h2>
         <div class="ms-2 <%= @percentage_increase <= 0 ? "text-success" : "text-danger" %>"><%= @percentage_increase %>%</div>
       </div>
-      <p class="text-muted m-0">In the last <%= time_ago_in_words(@time_ago.ago) %></p>
+      <p class="text-muted m-0">Since <%= time_ago_in_words(@time_ago.ago) %> ago</p>
     </div>
   </div>
 </div>
