@@ -1,11 +1,11 @@
-<div class="my-5 py-4"></div>
+<div class="my-5"></div>
 <p class="mb-0 text-muted">Harled Inc</p>
 <h2>🧐 Monocle</h2>
 <hr/>
 <div class="row">
   <div class="col col-md-4">
     <div class="card h-100 w-100">
-      <div class="my-5 py-4"></div>
+      <%= render Monocle::ExceptionsByControllerComponent.new(exceptions: Monocle::AuthorizationException.all) %>
     </div>
   </div>
   <div class="col col-md-4">

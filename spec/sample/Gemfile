@@ -31,6 +31,8 @@ gem "jbuilder"
 
 gem "monocle", path: "/workspaces/monocle"
 
+gem "apexcharts", require: "apex_charts/prefix_with_apex"
+
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
