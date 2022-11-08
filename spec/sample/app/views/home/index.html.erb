@@ -28,4 +28,7 @@
   <div class="col-md-3 d-flex align-items-stretch">
     <%= render Monocle::UsersAffectedSinceTimeAgoComponent.new(exceptions: Monocle::AuthorizationException.all) %>
   </div>
+  <div class="col-md-3 d-flex align-items-stretch">
+    <%= render Monocle::HighestControllerActionCountComponent.new(exceptions: Monocle::AuthorizationException.all) %>
+  </div>
 </div>

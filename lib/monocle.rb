@@ -10,6 +10,7 @@ require_relative "../app/components/monocle/users_affected_since_time_ago_compon
 require_relative "../app/components/monocle/exceptions_by_controller_component"
 require_relative "../app/components/monocle/exceptions_by_request_component"
 require_relative "../app/components/monocle/exceptions_by_user_component"
+require_relative "../app/components/monocle/highest_controller_action_count_component"
 
 # models
 require_relative "../app/models/monocle/authorization_exception"
