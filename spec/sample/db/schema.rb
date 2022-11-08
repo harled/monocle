@@ -24,4 +24,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_16_021202) do
     t.datetime "updated_at", null: false
     t.index ["user_type", "user_id"], name: "index_monocle_authorization_exceptions_on_user"
   end
+
 end

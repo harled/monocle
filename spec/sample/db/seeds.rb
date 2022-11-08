@@ -13,7 +13,7 @@ created_dates = [1.day.ago, 2.days.ago, 3.days.ago, 1.week.ago, 2.weeks.ago, 3.w
   controller_name = controller_names.sample
   action_name = action_names.sample
 
-  Monocle::AuthorizationException.create(
+  exception = Monocle::AuthorizationException.create(
     title: title,
     request: requests.sample,
     controller_name: controller_name,
@@ -21,7 +21,8 @@ created_dates = [1.day.ago, 2.days.ago, 3.days.ago, 1.week.ago, 2.weeks.ago, 3.w
     exception_class: exception_class,
     backtrace: ["/app/app/controllers/#{controller_name.underscore}_controller.rb:3:in `#{action_name}'"],
     user_type: user_type,
-    user_id: user_ids.sample,
-    created_at: created_dates.sample
+    user_id: user_ids.sample
   )
+
+  exception.update_column(:created_at, created_dates.sample)
 end
