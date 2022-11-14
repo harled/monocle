@@ -5,17 +5,17 @@
 <div class="row">
   <div class="col col-md-4">
     <div class="card h-100 w-100">
-      <%= render Monocle::ExceptionsByControllerComponent.new(exceptions: Monocle::AuthorizationException.all) %>
+      <%= render Monocle::ExceptionsByControllerComponent.new(exceptions: Monocle::AuthorizationException.all, time_ago: 7.days) %>
     </div>
   </div>
   <div class="col col-md-4">
     <div class="card h-100 w-100">
-      <%= render Monocle::ExceptionsByRequestComponent.new(exceptions: Monocle::AuthorizationException.all) %>
+      <%= render Monocle::ExceptionsByRequestComponent.new(exceptions: Monocle::AuthorizationException.all, time_ago: 7.days) %>
     </div>
   </div>
   <div class="col col-md-4">
     <div class="card h-100 w-100">
-      <%= render Monocle::ExceptionsByUserComponent.new(exceptions: Monocle::AuthorizationException.all) %>
+      <%= render Monocle::ExceptionsByUserComponent.new(exceptions: Monocle::AuthorizationException.all, time_ago: 7.days) %>
     </div>
   </div>
 </div>
@@ -23,13 +23,13 @@
 <hr/>
 <div class="row mt-4">
   <div class="col-md-3 d-flex align-items-stretch">
-    <%= render Monocle::ExceptionsSinceTimeAgoComponent.new(exceptions: Monocle::AuthorizationException.all) %>
+    <%= render Monocle::ExceptionsSinceTimeAgoComponent.new(exceptions: Monocle::AuthorizationException.all, time_ago: 7.days) %>
   </div>
   <div class="col-md-3 d-flex align-items-stretch">
-    <%= render Monocle::UsersAffectedSinceTimeAgoComponent.new(exceptions: Monocle::AuthorizationException.all) %>
+    <%= render Monocle::UsersAffectedSinceTimeAgoComponent.new(exceptions: Monocle::AuthorizationException.all, time_ago: 7.days) %>
   </div>
   <div class="col-md-6 d-flex align-items-stretch">
-    <%= render Monocle::HighestControllerActionCountComponent.new(exceptions: Monocle::AuthorizationException.all) %>
+    <%= render Monocle::HighestControllerActionCountComponent.new(exceptions: Monocle::AuthorizationException.all, time_ago: 7.days) %>
   </div>
 </div>
 
@@ -37,9 +37,9 @@
 <hr/>
 <div class="row mt-4">
   <div class="col-md-6 d-flex align-items-stretch">
-    <%= render Monocle::ControllersOverTimeComponent.new(exceptions: Monocle::AuthorizationException.all) %>
+    <%= render Monocle::ControllersOverTimeComponent.new(exceptions: Monocle::AuthorizationException.all, time_ago: 7.days) %>
   </div>
   <div class="col-md-6 d-flex align-items-stretch">
-    <%= render Monocle::TopTenUsersComponent.new(exceptions: Monocle::AuthorizationException.all) %>
+    <%= render Monocle::TopTenUsersComponent.new(exceptions: Monocle::AuthorizationException.all, time_ago: 7.days) %>
   </div>
 </div>
