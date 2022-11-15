@@ -1,28 +1,56 @@
-# 🧐 Monocle
 
-🤵‍♀️🤵 Using Pundit as a User Experience (UX) tool 🤵🤵‍♀️
+<h1 align="center">
+  <br>
+  <img src="/workspaces/monocle/monocle_logo.svg" alt="Monocle" width="200">
+  <br>
+  Monocle
+  <br>
+</h1>
 
-A suite of [ViewComponents](https://github.com/github/view_component) for plug and play use right from your [Pundit](https://github.com/varvet/pundit) exception data! Pundit is a popular authorization framework for Rails applications, but it has a hidden talent, UX! Moncale sits on Pundit's eye and provides insights of broken flows in your app leading to unauthorized responses.
+<h4 align="center">
 
-This gem includes components for the following reports: **Add completed components here**
-- Issue: https://github.com/harled/monocle/issues/1
-- Issue: https://github.com/harled/monocle/issues/2
-- Issue: https://github.com/harled/monocle/issues/5
+A suite of [ViewComponents](https://github.com/github/view_component) for plug and play use right from your [Pundit](https://github.com/varvet/pundit) exception data!
 
-This gem assumes:
-- Data passed in is an ActiveRecordRelation queryable by
-  - The time the exception occurred: `created_at: datetime`
-  - The name of the controller in which the exception was called: `controller_name: string`
-  - The name of the unauthorized action: `action_name: string`
-- Bootstrap 5.1 is loaded in your project
-  - It will work without Bootstrap, however, you will need to provide your own custom styling for several Bootstrap classes.
+</h4>
+
+<img src="/workspaces/monocle/monocle_dashboard.gif" alt="Monocle Dashboard">
+
+## Dependencies
+Monocle uses a couple libraries to deliver high quality components.
+<table style="width: 100%; border: solid;">
+  <thead>
+    <tr>
+      <th>Dependency</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://github.com/ViewComponent/view_component">View Components</a></td>
+      <td>2.53.0</td>
+    </tr>
+    <tr>
+      <td><a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap</a></td>
+      <td>5.0</td>
+    </tr>
+    <tr>
+      <td><a href="https://github.com/ankane/groupdate">Group Date</a></td>
+      <td>6.1.0</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.npmjs.com/package/apexcharts">ApexCharts</a></td>
+      <td>3.36.3</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'monocle', github: 'harled/monocle', branch: 'main'
+# Gemfile
+gem 'monocle'
 ```
 
 And then execute:
@@ -33,20 +61,63 @@ Or install it yourself as:
 
     $ gem install monocle
 
-## Installation
-
-Add the monocle gem to your application's Gemfile:
-
-```ruby
-gem "monocle"
-```
-
 To generate the migration and build the data model, run:
 
 ```base
 rails generate monocle:authorization_exceptions
 rails db:migrate
 ```
+
+## Usage
+Once you have Monocle loaded you can render any of its view components. For example, you could render the `Monocle::ControllersOverTimeComponent` with:
+
+```erb
+<%= render Monocle::ControllersOverTimeComponent.new(events: AuthorizationException.all) %>
+```
+
+With a full list of components here:
+<table style="width: 100%; border: solid;">
+  <thead>
+    <tr>
+      <th>Component</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>ControllersOverTimeComponent</td>
+      <td>Shows the number of events over time.</td>
+    </tr>
+    <tr>
+      <td>ExceptionsByControllerComponent</td>
+      <td>Shows the number of events grouped by controller name.</td>
+    </tr>
+    <tr>
+      <td>ExceptionsByRequestComponent</td>
+      <td>Shows the number of events grouped by request.</td>
+    </tr>
+    <tr>
+      <td>ExceptionsByUserComponent</td>
+      <td>Shows the number of events grouped by user id.</td>
+    </tr>
+    <tr>
+      <td>ExceptionsSinceTimeAgoComponent</td>
+      <td>Shows the number of exceptions over a specified period of time and the percentage increase over time.</td>
+    </tr>
+    <tr>
+      <td>HighestControllerActionCountComponent</td>
+      <td>Shows the controller endpoint which has caused the most authorization exceptions given the events passed in.</td>
+    </tr>
+    <tr>
+      <td>TopTenUsersComponent</td>
+      <td>Shows the top ten users in terms of who caused most authorization exceptions.</td>
+    </tr>
+    <tr>
+      <td>UsersAffectedSinceTimeAgoComponent</td>
+      <td>Shows the number of users affected over a given time period.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Development
 
