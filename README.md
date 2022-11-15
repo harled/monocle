@@ -1,7 +1,7 @@
 
 <h1 align="center">
   <br>
-  <img src="/workspaces/monocle/monocle_logo.svg" alt="Monocle" width="200">
+  <img src="monocle_logo.svg" alt="Monocle" width="200">
   <br>
   Monocle
   <br>
@@ -13,7 +13,7 @@ A suite of [ViewComponents](https://github.com/github/view_component) for plug a
 
 </h4>
 
-<img src="/workspaces/monocle/monocle_dashboard.gif" alt="Monocle Dashboard">
+<img src="monocle_dashboard.gif" alt="Monocle Dashboard">
 
 ## Dependencies
 Monocle uses a couple libraries to deliver high quality components.
