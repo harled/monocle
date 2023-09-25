@@ -5,7 +5,7 @@ gemspec
 
 # rails_version = "#{ENV['RAILS_VERSION'] || 'main'}"
 rails_version = (ENV["RAILS_VERSION"] || "~> 7").to_s
-gem "rails", rails_version == "main" ? {git: "https://github.com/rails/rails", ref: "main"} : rails_version
+gem "rails", (rails_version == "main") ? {git: "https://github.com/rails/rails", ref: "main"} : rails_version
 gem "sqlite3", ">= 1.4"
 
 gem "rake", "~> 13.0"
@@ -31,5 +31,5 @@ if RUBY_VERSION >= "3.1"
 end
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
-  gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "debug", platforms: %i[mri mingw x64_mingw]
 end
