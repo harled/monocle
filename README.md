@@ -17,6 +17,7 @@ A suite of [ViewComponents](https://github.com/github/view_component) for plug a
 
 ## Dependencies
 Monocle uses a couple libraries to deliver high quality components.
+
 <table style="width: 100%; border: solid;">
   <thead>
     <tr>
@@ -26,7 +27,7 @@ Monocle uses a couple libraries to deliver high quality components.
   </thead>
   <tbody>
     <tr>
-      <td><a href="https://github.com/ViewComponent/view_component">View Components</a></td>
+      <td><a href="https://github.com/ViewComponent/view_component"></a></td>
       <td>2.53.0</td>
     </tr>
     <tr>
@@ -121,11 +122,28 @@ With a full list of components here:
 
 ## Development
 
-After checking out the repo, run `bin/setup` to install dependencies. 
+Monocle development is made easy with vscode devontainers. Once the repo has been checked out, open the project in a devcontainer and 
+open a new terminal.
 
-Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+```bash
+# install required packages
+bin/setup
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+# install spec/sample packages
+bundle install --gemfile spec/sample/Gemfile
+
+# run test cases and ensure everything is passing
+rake spec
+
+# an interactive prompt that will allow you to experiment with matey
+bin/console
+```
+
+To install this gem onto your local machine, run `bundle exec rake install`. 
+
+## Release
+
+To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
 
 ## Contributing
 Bug reports and pull requests are welcome on GitHub at https://github.com/harled/monocle. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct.
