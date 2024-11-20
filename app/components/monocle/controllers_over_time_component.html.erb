@@ -4,4 +4,12 @@
     <p class="text-muted text-center m-0">Since <%= time_ago_in_words(@time_ago.ago) %> ago</p>
     <%= apex_line_chart @exceptions_by_controller_over_time, module: true, legend: false, id: "ID#{SecureRandom.hex}" %>
   </div>
+  <% if @debug %>
+  <div class="card-footer">
+    <h4>DEBUG</h4>
+    <p>
+      class: ExceptionsByControllerComponent
+    </p>
+  </div>
+  <% end %>
 </div>

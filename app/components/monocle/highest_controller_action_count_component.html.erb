@@ -8,4 +8,12 @@
       <p class="text-muted m-0">Since <%= time_ago_in_words(@time_ago.ago) %> ago</p>
     </div>
   </div>
+  <% if @debug %>
+    <div class="card-footer">
+      <h4>DEBUG</h4>
+      <p>
+        class: ExceptionsByControllerComponent
+      </p>
+    </div>
+  <% end %>
 </div>
