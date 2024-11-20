@@ -17,7 +17,7 @@ This information can help improve security and useability. You and your team wil
 Monocle depends on the following libraries:
 
 * [ViewComponent](https://github.com/ViewComponent/view_component)
-* [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
+* [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
 * [Groupdate](https://github.com/ankane/groupdate)
 * [ApexCharts](https://www.npmjs.com/package/apexcharts)
 
