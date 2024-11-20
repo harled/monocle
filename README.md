@@ -103,7 +103,7 @@ bundle install
 # migrate the database
 rails db:migrate
 
-# seed data with mock exceptions
+# seed data with mock exceptions (optionally pass count= environment variable for the number of records to create, default is 100)
 rails db:seed
 
 # run the server
