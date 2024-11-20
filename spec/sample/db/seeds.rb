@@ -29,7 +29,7 @@ created_dates = [1.hour.ago, 1.day.ago, 2.days.ago, 3.days.ago, 1.week.ago, 2.we
 count.times do
   request = requests.sample
 
-  exception = Monocle::AuthorizationException.create(
+  Monocle::AuthorizationException.create(
     title: title,
     request: request[0],
     controller_name: request[1],
@@ -40,6 +40,4 @@ count.times do
     user_id: user_ids.sample,
     created_at: created_dates.sample
   )
-
-  # exception.update_column(:created_at, created_dates.sample)
 end
