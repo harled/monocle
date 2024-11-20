@@ -2,7 +2,11 @@
   <div class="card-body">
     <h4 class="my-2 text-center">Exceptions By Controller</h4>
     <p class="text-muted text-center m-0">Since <%= time_ago_in_words(@time_ago.ago) %> ago</p>
-    <%= apex_pie_chart @exceptions_by_controller, module: true, legend: false, id: "ID#{SecureRandom.hex}" %>
+    <% if @exceptions_by_controller.any? %>
+      <%= apex_pie_chart @exceptions_by_controller, module: true, legend: false, id: "ID#{SecureRandom.hex}" %>
+    <% else %>
+      <p class="text-center text-danger mt-3">no data</p>
+    <% end %>
   </div>
   <% if @debug %>
   <div class="card-footer">

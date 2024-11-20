@@ -8,7 +8,11 @@ module Monocle
       @time_ago = time_ago
       @debug = debug
       @highest_controller_action_count = exceptions.group(:controller_name, :action_name).count.max_by(&:second)
-      @highest_controller_action_count = @highest_controller_action_count.first.first + "#" + @highest_controller_action_count.first.second
+      @highest_controller_action_count = if @highest_controller_action_count.nil?
+        "no data"
+      else
+        @highest_controller_action_count.first.first + "#" + @highest_controller_action_count.first.second
+      end
     end
   end
 end

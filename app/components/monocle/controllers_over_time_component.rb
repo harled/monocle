@@ -7,7 +7,13 @@ module Monocle
     def initialize(exceptions:, time_ago: 7.days, debug: false)
       @time_ago = time_ago
       @debug = debug
-      @exceptions_by_controller_over_time = [{name: "By controller over time", data: exceptions.group_by_day(:created_at, range: time_ago.ago.., format: "%Y/%m/%d").count}]
+      data = exceptions.group_by_day(:created_at, range: time_ago.ago.., format: "%Y/%m/%d").count
+
+      @exceptions_by_controller_over_time = if data.any?
+        [{name: "By controller over time", data: data}]
+      else
+        []
+      end
     end
   end
 end
