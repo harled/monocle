@@ -5,8 +5,9 @@ module Monocle
   # - The number of exceptions created within a specified time period
   # - The percentage increase in them
   class ExceptionsSinceTimeAgoComponent < ApplicationComponent
-    def initialize(exceptions:, time_ago: 24.hours)
+    def initialize(exceptions:, time_ago: 24.hours, debug: false)
       @time_ago = time_ago
+      @debug = debug
       @exceptions_created = exceptions.where(created_at: @time_ago.ago..).count.to_f
       exceptions_last_period = exceptions.where(created_at: (2 * @time_ago).ago..@time_ago.ago).count.to_f
 

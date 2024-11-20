@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_16_021202) do
+ActiveRecord::Schema[7.2].define(version: 2022_10_16_021202) do
   create_table "monocle_authorization_exceptions", force: :cascade do |t|
     t.string "title"
     t.string "request"
@@ -23,5 +23,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_16_021202) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_type", "user_id"], name: "index_monocle_authorization_exceptions_on_user"
+  end
+
+  create_table "pundit_exceptions", force: :cascade do |t|
+    t.text "controller_name", null: false
+    t.text "action_name", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 end
