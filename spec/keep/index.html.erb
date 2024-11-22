@@ -1,0 +1,66 @@
+<div class="my-5"></div>
+<p class="mb-0 text-muted">with ❤️ from <a href="https://harled.ca" target="_blank">Harled Inc.</a></p>
+<h1>🧐 Monocle</h1>
+<p>
+  Insights from your Pundit exceptions. <a href="https://github.com/harled/monocle" target="_blank">GitHub Project</a>
+</p>
+
+<hr/>
+
+<div class="row">
+  <div class="col">
+    <div class="text-muted">
+      The following charts are based on a total of <strong><%= @exceptions.count %></strong> exception records, <strong><%= @exceptions.where(created_at: @time_ago.ago..).count %></strong> within the selected period.
+    </div>
+  </div>
+  <div class="col-auto">
+    <%= form_tag home_index_path, method: :post do %>
+      <%= label_tag "Period" %>
+      <%= select_tag :period, options_for_select([[:day, :day], [:week, :week], [:month, :month]], selected: params[:period]), onchange: "this.form.submit()" %>
+    <% end %>
+  </div>
+</div>
+
+
+<div class="row pt-4">
+  <div class="col col-md-4">
+    <div class="border">
+      <%= render Monocle::ExceptionsByControllerComponent.new(exceptions: @exceptions, time_ago: @time_ago, debug: true) %>
+    </div>
+  </div>
+  <div class="col col-md-4">
+    <div class="border">
+      <%= render Monocle::ExceptionsByRequestComponent.new(exceptions: @exceptions, time_ago: @time_ago, debug: true) %>
+    </div>
+  </div>
+  <div class="col col-md-4">
+    <div class="border">
+      <%= render Monocle::ExceptionsByUserComponent.new(exceptions: @exceptions, time_ago: @time_ago, debug: true) %>
+    </div>
+  </div>
+</div>
+
+<p class="text-muted text-center mt-5">QUICK STATS</p>
+<hr/>
+<div class="row mt-4">
+  <div class="col-md-3 d-flex align-items-stretch">
+    <%= render Monocle::ExceptionsSinceTimeAgoComponent.new(exceptions: @exceptions, time_ago: @time_ago, debug: true) %>
+  </div>
+  <div class="col-md-3 d-flex align-items-stretch">
+    <%= render Monocle::UsersAffectedSinceTimeAgoComponent.new(exceptions: @exceptions, time_ago: @time_ago, debug: true) %>
+  </div>
+  <div class="col-md-6 d-flex align-items-stretch">
+    <%= render Monocle::HighestControllerActionCountComponent.new(exceptions: @exceptions, time_ago: @time_ago, debug: true) %>
+  </div>
+</div>
+
+<p class="text-muted text-center mt-5">STATS OVER TIME</p>
+<hr/>
+<div class="row mt-4">
+  <div class="col-md-6 d-flex align-items-stretch">
+    <%= render Monocle::ControllersOverTimeComponent.new(exceptions: @exceptions, time_ago: @time_ago, debug: true) %>
+  </div>
+  <div class="col-md-6 d-flex align-items-stretch">
+    <%= render Monocle::TopTenUsersComponent.new(exceptions: @exceptions, time_ago: @time_ago, debug: true) %>
+  </div>
+</div>

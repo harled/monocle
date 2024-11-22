@@ -1,4 +1,4 @@
-class CreateMonocleAuthorizationExceptions < ActiveRecord::Migration[7.0]
+class CreateMonocleAuthorizationExceptions < ActiveRecord::Migration[8.0]
   def change
     create_table :monocle_authorization_exceptions do |t|
       t.string :title
@@ -6,7 +6,7 @@ class CreateMonocleAuthorizationExceptions < ActiveRecord::Migration[7.0]
       t.string :controller_name
       t.string :action_name
       t.string :exception_class
-      t.text :backtrace, array: true
+      t.text :backtrace, array: true, default: []
 
       t.references :user, polymorphic: true
 

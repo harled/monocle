@@ -1,6 +1,14 @@
-# frozen_string_literal: true
+# This file should ensure the existence of records required to run the application in every environment (production,
+# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
+# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
+#
+# Example:
+#
+#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
+#     MovieGenre.find_or_create_by!(name: genre_name)
+#   end
 
-count = ENV["count"].to_i || 100
+count = (ENV["count"].present? && ENV["count"].to_i) || 100
 
 # exception title / name
 title = "not allowed to something? this object on '/app/vendor/bundle/ruby/3.0.0/gems/**.rb:223:in `authorize''"
@@ -29,7 +37,7 @@ created_dates = [1.hour.ago, 1.day.ago, 2.days.ago, 3.days.ago, 1.week.ago, 2.we
 count.times do
   request = requests.sample
 
-  Monocle::AuthorizationException.create(
+  Monocle::AuthorizationException.create!(
     title: title,
     request: request[0],
     controller_name: request[1],
