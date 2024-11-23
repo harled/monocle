@@ -10,7 +10,7 @@ module Monocle
       data = exceptions.group_by_day(:created_at, range: time_ago.ago.., format: "%Y/%m/%d").count
 
       @exceptions_by_controller_over_time = if data.any?
-        [{name: "By controller over time", data: data}]
+        [ { name: "By controller over time", data: data } ]
       else
         []
       end

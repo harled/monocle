@@ -9,7 +9,7 @@ module Monocle
       @debug = debug
       @exceptions_by_controller = []
       exceptions.where(created_at: time_ago.ago..).group(:controller_name).count.each do |controller_name, count|
-        @exceptions_by_controller << {name: controller_name, data: count}
+        @exceptions_by_controller << { name: controller_name, data: count }
       end
     end
   end

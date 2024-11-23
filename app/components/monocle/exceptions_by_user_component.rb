@@ -9,7 +9,7 @@ module Monocle
       @debug = debug
       @exceptions_by_user = []
       exceptions.where(created_at: time_ago.ago..).group(:user_id).count.each do |user_id, count|
-        @exceptions_by_user << {name: "User id #{user_id}", data: count}
+        @exceptions_by_user << { name: "User id #{user_id}", data: count }
       end
     end
   end

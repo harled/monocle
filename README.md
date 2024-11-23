@@ -93,7 +93,7 @@ ViewComponents are pretty hard to test without a Ruby on Rails application. This
 
 To use the sample application: 
 
-```
+```bash
 # change directory to the sample project
 cd spec/sample
 
