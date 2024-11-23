@@ -1,4 +1,4 @@
-name: RuboCop
+name: Rubocop
 
 on: [pull_request]
 
@@ -20,5 +20,8 @@ jobs:
         ruby-version: 3.3
         bundler-cache: true
 
-    - name: Run RuboCop
+    - name: Setup Rubocop
+      run: bundle binstubs rubocop
+
+    - name: Run Rubocop
       run: bundle exec rubocop --parallel
