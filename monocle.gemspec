@@ -34,15 +34,15 @@ Gem::Specification.new do |spec|
   spec.add_dependency "groupdate"
 
   # debug
-  spec.add_development_dependency "debug", "~> 1.0"
+  # spec.add_development_dependency "debug", "~> 1.0"
 
   # test
   spec.add_development_dependency "factory_bot", "~> 6.0"
-  spec.add_development_dependency "rspec-rails", "~> 5.0"
+  spec.add_development_dependency "rspec-rails", "~> 7.1"
 
   # run
   spec.add_development_dependency "sprockets-rails", "~> 3.2.2"
-  spec.add_development_dependency "sqlite3", "~> 1.0"
+  spec.add_development_dependency "sqlite3", ">= 1.4"
 
   # lint
   spec.add_development_dependency "rubocop", ">= 0.47"
