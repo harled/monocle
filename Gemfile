@@ -13,6 +13,7 @@ gem "sqlite3", ">= 1.4"
 gem "brakeman", require: false
 
 # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
+gem "rubocop", "~> 1.68", require: false
 gem "rubocop-rails-omakase", require: false
 
 # gem "factory_bot_rails"

@@ -277,6 +277,7 @@ DEPENDENCIES
   rails (~> 8)
   rspec (~> 3.0)
   rspec-rails (~> 7.1)
+  rubocop (~> 1.68)
   rubocop-rails-omakase
   sqlite3 (>= 1.4)
 
