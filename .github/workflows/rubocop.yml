@@ -21,4 +21,4 @@ jobs:
     - run: bundle binstubs rubocop
 
     - name: Run Rubocop
-      run: bundle exec rubocop --f github
+      run: bundle exec rubocop -f github
