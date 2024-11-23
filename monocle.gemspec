@@ -5,8 +5,8 @@ require_relative "lib/monocle/version"
 Gem::Specification.new do |spec|
   spec.name = "monocle"
   spec.version = Monocle::VERSION
-  spec.authors = ["Jonathan Loos", "Chris Young"]
-  spec.email = ["jon@harled.ca", "chris@harled.ca"]
+  spec.authors = [ "Jonathan Loos", "Chris Young" ]
+  spec.email = [ "jon@harled.ca", "chris@harled.ca" ]
 
   spec.summary = "Esteemed insights for authorization exceptions."
   spec.description = "Monocle offers a set of view components to derive UX insights from your authorization errors."
@@ -27,17 +27,18 @@ Gem::Specification.new do |spec|
   end
   spec.bindir = "exe"
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
-  spec.require_paths = ["lib"]
+  spec.require_paths = [ "lib" ]
 
   # frontend
   spec.add_dependency "view_component"
   spec.add_dependency "groupdate"
 
   # debug
-  # spec.add_development_dependency "debug", "~> 1.0"
+  spec.add_development_dependency "debug", "~> 1.0"
 
   # test
   spec.add_development_dependency "factory_bot", "~> 6.0"
+  spec.add_development_dependency "rspec", "~> 3.0"
   spec.add_development_dependency "rspec-rails", "~> 7.1"
 
   # run
