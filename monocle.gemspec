@@ -45,8 +45,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "sqlite3", ">= 1.4"
 
   # lint
-  spec.add_development_dependency "rubocop", ">= 0.47"
-  spec.add_development_dependency "rubocop-rails"
-  spec.add_development_dependency "rubocop-performance"
-  spec.add_development_dependency "standard", "~> 1.3"
+  spec.add_development_dependency "rubocop-rails-omakase", "~> 1.0"
 end

@@ -1,14 +1,6 @@
-require:
-  - standard
-  - rubocop-rails
-  - rubocop-performance
-
-inherit_gem:
-  standard: config/base.yml
+inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 
 AllCops:
-  DisabledByDefault: true
-  SuggestExtensions: false
   TargetRubyVersion: 3.0
   Exclude:
     - 'test/**'
@@ -18,6 +10,4 @@ AllCops:
     - '**/vendor/**/*'
 
 Gemspec/RequireMFA:
-  Enabled: false
-Lint/MissingSuper:
   Enabled: false
