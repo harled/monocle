@@ -12,16 +12,13 @@ jobs:
       BUNDLE_WITHOUT: default doc job cable storage ujs test db
 
     steps:
-    - uses: actions/checkout@v3
-
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
+    - uses: actions/checkout@v4
+    - uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.3
         bundler-cache: true
-
-    - name: Setup Rubocop
-      run: bundle binstubs rubocop
+    - run: bundle install
+    - run: bundle binstubs rubocop
 
     - name: Run Rubocop
-      run: bundle exec rubocop --parallel
+      run: rubocop --f github
