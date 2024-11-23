@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "Monocle offers a set of view components to derive UX insights from your authorization errors."
   spec.homepage = "https://github.com/harled/monocle"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 2.6.0"
+  spec.required_ruby_version = ">= 3.1.0"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/harled/monocle"
@@ -29,22 +29,6 @@ Gem::Specification.new do |spec|
   spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = [ "lib" ]
 
-  # frontend
   spec.add_dependency "view_component"
   spec.add_dependency "groupdate"
-
-  # debug
-  spec.add_development_dependency "debug", "~> 1.0"
-
-  # test
-  spec.add_development_dependency "factory_bot", "~> 6.0"
-  spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_development_dependency "rspec-rails", "~> 7.1"
-
-  # run
-  spec.add_development_dependency "sprockets-rails", "~> 3.2.2"
-  spec.add_development_dependency "sqlite3", ">= 1.4"
-
-  # lint
-  spec.add_development_dependency "rubocop-rails-omakase", "~> 1.0"
 end
