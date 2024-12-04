@@ -1,4 +1,4 @@
-name: Rubocop
+name: Linting
 
 on: [pull_request]
 
