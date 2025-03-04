@@ -22,6 +22,6 @@ ActiveRecord::Schema[8.0].define(version: 2024_11_22_042507) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_type", "user_id"], name: "index_monocle_authorization_exceptions_on_user"
+    t.index [ "user_type", "user_id" ], name: "index_monocle_authorization_exceptions_on_user"
   end
 end
