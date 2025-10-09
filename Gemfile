@@ -18,7 +18,7 @@ gem "rubocop-rails-omakase", require: false
 
 # gem "factory_bot_rails"
 gem "rspec", "~> 3.0"
-gem "rspec-rails", "~> 7.1"
+gem "rspec-rails", "~> 8.0"
 gem "factory_bot", "~> 6.0"
 
 gem "debug", platforms: %i[mri mingw x64_mingw]
